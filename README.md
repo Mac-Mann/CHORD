@@ -95,7 +95,7 @@ Jedi Armor = DEF + 7-9, and 35% to 40% damage immunity resistance + other bonuse
 
 Droid Armor (generally follows a similar system as the light to heavy armors above, with some realism tweaks like being more resilient to fire and elemental damage like cold and sonic, but more vulnerable to elements like ion and electrical damage). In general, droids aren’t really supposed to move like gazelles, and heavy and assault armor will provide better results with party members like HK-47. 
 
-######## OTHER CHANGES ########
+## OTHER CHANGES
 - shields now are 1.5x stronger across the board and have 10 charges instead of 5, feats and give an addition 1.6x strength boost.
 
 ﻿- Force alignment breakdown:
