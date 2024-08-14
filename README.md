@@ -100,18 +100,21 @@ Droid Armor (generally follows a similar system as the light to heavy armors abo
 
 ﻿- Force alignment breakdown:
 from forceadjust.2da file:
-row  goodcost     evilcost
-﻿0    2.25            1 // max evil, 1 to 1 cost or base cost of a given dark/neutral power, 2.25x means over double FP cost for good
-1	   2.00	           1
-2	   1.75	           1
-3	   1.50	           1
-4	   1.25	           1
-5	   0.85	           0.85     //neutral alignment, since no attribute bonuses, these characters given a 15% FP reduction for all powers.
-6	   1	             1.25
-7	   1	             1.50
-8	   1	             1.75
-9	   1	             2.00
-10	 1	             2.25. // max good, ﻿1 to 1 cost or base cost of a given good/neutral power, ﻿2.25x FP cost for dark powers
+
+<blockquote>
+row ---------goodcost --evilcost </br>
+﻿0 -----------2.25 ------- 1 // max evil, 1 to 1 cost or base cost of a given dark/neutral power, 2.25x means over double FP cost for good </br>
+1	-----------2.00 ------- 1 </br>
+2	-----------1.75 ------- 1 </br>
+3	-----------1.50 ------- 1 </br>
+4	-----------1.25 ------- 1 </br>
+5	-----------0.85 ------- 0.85     //neutral alignment, since no attribute bonuses, these characters given a 15% FP reduction for all powers. </br>
+6 -----------1 ---------- 1.25 </br>
+7	-----------1 ---------- 1.50 </br>
+8	-----------1 ---------- 1.75 </br>
+9	-----------1 ---------- 2.00 </br>
+10 ----------1 ---------- 2.25. // max good, ﻿1 to 1 cost or base cost of a given good/neutral power, ﻿2.25x FP cost for dark powers </br>
+</blockquote>
 
 
 - All force powers are easily 2x to 4x times more costly. the more broken the power, the most cost. That said, cost is reasonable and calculated, but you won't be spamming all force powers willy nilly unless youre a neutral, gray force user. In general, you will get to spam a high level ability about 4-5 times if using someone like Kreia with a ton of Wisdom
