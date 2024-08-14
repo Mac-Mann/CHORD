@@ -101,28 +101,69 @@ Droid Armor (generally follows a similar system as the light to heavy armors abo
 ﻿- Force alignment breakdown:
 from forceadjust.2da file:
 
-<blockquote>
-row ---------goodcost --evilcost </br>
-﻿0 -----------2.25 ------- 1 // max evil, 1 to 1 cost or base cost of a given dark/neutral power, 2.25x means over double FP cost for good </br>
-1	-----------2.00 ------- 1 </br>
-2	-----------1.75 ------- 1 </br>
-3	-----------1.50 ------- 1 </br>
-4	-----------1.25 ------- 1 </br>
-5	-----------0.85 ------- 0.85     //neutral alignment, since no attribute bonuses, these characters given a 15% FP reduction for all powers. </br>
-6 -----------1 ---------- 1.25 </br>
-7	-----------1 ---------- 1.50 </br>
-8	-----------1 ---------- 1.75 </br>
-9	-----------1 ---------- 2.00 </br>
-10 ----------1 ---------- 2.25. // max good, ﻿1 to 1 cost or base cost of a given good/neutral power, ﻿2.25x FP cost for dark powers </br>
-</blockquote>
+row ---------goodcost --evilcost
+﻿0 -----------2.25 ------- 1 // max evil, 1 to 1 cost or base cost of a given dark/neutral power, 2.25x means over double FP cost for good
+1 -----------2.00 ------- 1
+2 -----------1.75 ------- 1
+3 -----------1.50 ------- 1
+4 -----------1.25 ------- 1
+5 -----------0.85 ------- 0.85 //neutral alignment, since no attribute bonuses, these characters given a 15% FP reduction for all powers.
+6 -----------1 ---------- 1.25
+7 -----------1 ---------- 1.50
+8 -----------1 ---------- 1.75
+9 -----------1 ---------- 2.00
+10 ----------1 ---------- 2.25. // max good, ﻿1 to 1 cost or base cost of a given good/neutral power, ﻿2.25x FP cost for dark powers
 
 
 - All force powers are easily 2x to 4x times more costly. the more broken the power, the most cost. That said, cost is reasonable and calculated, but you won't be spamming all force powers willy nilly unless youre a neutral, gray force user. In general, you will get to spam a high level ability about 4-5 times if using someone like Kreia with a ton of Wisdom
 
-
 - all companions now gain 90% of the xp you gain, instead of 80% like base game
 
 - all level xp requirements are cut in half. So you can reach level 50 without cheats.
+
+- Autobalance.2da is modified to be slightly more balanaced here's the new updated version:
+
+Row  ----------name ------------vpmult  ------------tohitmult ------------armormult ------------damagemult ------------savemult ------------crmod ------------levelmult
+﻿0  ----------No_Auto_Balance  0.0--------------------0.0---------------------0.0 ------------------------0.0-------------------------- 0.0 ---------------------0 -------------------0
+1------------Set_1------------------- 0.80-----------------1.3----------------------1.3----------------------- 0.100------------------------1.3----------------------1--------------------1.00
+2------------Set_2------------------- 0.90-----------------1.3----------------------1.3------------------------0.100------------------------1.3----------------------1.5-----------------1.00
+3------------Set_3--------------------1.00-----------------1.3----------------------1.3------------------------0.100------------------------1.3----------------------2--------------------1.00
+4------------Set_4--------------------1.10-----------------1.3----------------------1.3------------------------0.100------------------------1.3----------------------3--------------------1.00
+5------------Set_5--------------------1.2-------------------1.3----------------------1.3------------------------0.100-﻿-----------------------1.3----------------------4--------------------1.00
+
+Before in version 1.0.0 damagemult was 1.000 for all 5 sets of enemies, which was leading to massive damage with armor, so now I reverted it to 0.100 which is very close to the default settings for this value in the original, default autobalance.2da settings.
+For more info on autobalance.2da see source: https://strategywiki.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II:_The_Sith_Lords/Autobalance
+
+Note, these values are pretty balanced so far and had a lot of thought put into them. enemies lack armor, so having slightly more health than normal, better chances / attack to hit (requiring higher DEF to evade), having more base DEF from armormult by 1.3x and having better saving throws 1.3x all works really well. For levelmult in the base default settings enemies are never 1 to 1 as you, there level mainly effects their health and their chance to resist / save against force powers like insanity.
+
+That said, even with all of these slight buffs, my Kreia with 25 wisdom can beat their save throws atleast 4/5 times, and I can hit them with my STR build character with 25 STR about 3.5/5 times per each attack roll.
+
+crmod does nothing to affect difficulty, it only determines the amount of xp given by enemies.
+
+damagemult is very close to the base game's configuration for these enemy sets, I just made it more uniform for ease of calculation.
+
+- difficultyopt.2da has been modified to the following: (these are the gameplay difficulty settings you can manually set in the options scr
+
+desc ------------damage multiplier
+Effortless-------------0.00
+Very Easy﻿-------------0.25
+Easy﻿-------------------- 0.5 ﻿﻿
+Normal-----------------1.0 
+Tough-------------------2.0
+Challenging﻿-----------2.5 ﻿
+Difficult﻿-----------------3.0
+Very Difficulty﻿--------3.5﻿﻿
+Overpowering--------4.0﻿﻿
+Insanity-----------------4.5
+Suicide------------------5.0
+Default------------------1.0
+
+
+- diffsettings.2da: (ths can add an additional damage multiplier, previously was 100, 125, 150, 175, 200) not sure how this works (the general consensus is still out on what this does exactly and how it behaves. So I set everything to 100 so that there is no damage reduction or modifier here to simplify balancing enemy damge:
+
+name
+MaxNPCDamagePercent dmeasy  easy---normal---hardcore----dmplayers
+--------------------------------------25----------100 ---100--------100-----------100
 
 ## DIFFICULTY SETTING OPTIONS RECOMMENDATION
 
