@@ -95,6 +95,32 @@ Jedi Armor = DEF + 7-9, and 35% to 40% damage immunity resistance + other bonuse
 
 Droid Armor (generally follows a similar system as the light to heavy armors above, with some realism tweaks like being more resilient to fire and elemental damage like cold and sonic, but more vulnerable to elements like ion and electrical damage). In general, droids aren’t really supposed to move like gazelles, and heavy and assault armor will provide better results with party members like HK-47. 
 
+######## OTHER CHANGES ########
+- shields now are 1.5x stronger across the board and have 10 charges instead of 5, feats and give an addition 1.6x strength boost.
+
+﻿- Force alignment breakdown:
+from forceadjust.2da file:
+row  goodcost     evilcost
+﻿0    2.25            1 // max evil, 1 to 1 cost or base cost of a given dark/neutral power, 2.25x means over double FP cost for good
+1	   2.00	           1
+2	   1.75	           1
+3	   1.50	           1
+4	   1.25	           1
+5	   0.85	           0.85     //neutral alignment, since no attribute bonuses, these characters given a 15% FP reduction for all powers.
+6	   1	             1.25
+7	   1	             1.50
+8	   1	             1.75
+9	   1	             2.00
+10	 1	             2.25. // max good, ﻿1 to 1 cost or base cost of a given good/neutral power, ﻿2.25x FP cost for dark powers
+
+
+- All force powers are easily 2x to 4x times more costly. the more broken the power, the most cost. That said, cost is reasonable and calculated, but you won't be spamming all force powers willy nilly unless youre a neutral, gray force user. In general, you will get to spam a high level ability about 4-5 times if using someone like Kreia with a ton of Wisdom
+
+
+- all companions now gain 90% of the xp you gain, instead of 80% like base game
+
+- all level xp requirements are cut in half. So you can reach level 50 without cheats.
+
 ## DIFFICULTY SETTING OPTIONS RECOMMENDATION
 
 Personally, I recommend you play this with a difficulty level between Difficult (3x enemy damage modifier), Very Difficult (3.5x enemy damage modifier), and Overpowering (4x enemy damage modifier).
