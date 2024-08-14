@@ -97,11 +97,11 @@ Droid Armor (generally follows a similar system as the light to heavy armors abo
 
 ## DIFFICULTY SETTING OPTIONS RECOMMENDATION
 
-Personally, I recommend you play this with a difficulty level between Difficult (4x enemy damage modifier), Very Difficult (4.5x enemy damage modifier), and Overpowering (5x enemy damage modifier).
+Personally, I recommend you play this with a difficulty level between Difficult (3x enemy damage modifier), Very Difficult (3.5x enemy damage modifier), and Overpowering (4x enemy damage modifier).
 
 I personally like Very Difficult to Overpowering, the balance there feels just about right in most cases. 
 
-If you choose to play on Insanity (6x enemy damage modifier) or Suicide (7.5x enemy damage modifier) and you manage to beat the game without cheats, then you will have all bragging rights, and I will be personally impressed.
+If you choose to play on Insanity (4.5x enemy damage modifier) or Suicide (5x enemy damage modifier) and you manage to beat the game without cheats, then you will have all bragging rights, and I will be personally impressed.
 
 ## FUTURE UPDATES
 
